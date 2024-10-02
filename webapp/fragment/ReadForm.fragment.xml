@@ -1,0 +1,33 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:myform="sap.ui.layout.form">
+    <Dialog id="_IDGenDialog1" contentWidth="500px">
+        <content>
+            <myform:SimpleForm editable="true" id="cFragmentMyform">
+                <myform:content>
+                    <Label id="_IDGenLabel1" text="{i18n>txtId}"/>
+                    <Input id="_IDGenInput1" value="{Empid}" />
+                    <Label id="_IDGenLabel2" text="{i18n>txtName}"/>
+                    <Input id="_IDGenInput2" value="{Empname}" />
+                    <Label id="_IDGenLabel3" text="{i18n>txtAdress}"/>
+                    <Input id="_IDGenInput3" value="{Empadd}"/>
+                    <Label id="_IDGenLabel4" text="{i18n>txtDisignation}"/>
+                    <Input id="_IDGenInput4" value="{Empdes}"/>
+                </myform:content>
+            </myform:SimpleForm>
+        </content>
+        <customHeader>
+            <Bar id="_IDGenBar1">
+                <contentLeft>
+                    <Text id="_IDGenText1" text="{i18n>txtEmployeeInformation}"/>
+                </contentLeft>
+                <contentRight>
+                    <Button id="_IDGenButton1" icon="sap-icon://decline" press="oCloseReadButton"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <buttons>
+            <Button id="_IDGenButton2" text="{i18n>txtUpdate}" press="oUpdateEmp"/>
+        </buttons>
+    </Dialog>
+</c:FragmentDefinition>

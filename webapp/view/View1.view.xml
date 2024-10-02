@@ -1,0 +1,66 @@
+<mvc:View controllerName="modulename.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:myform="sap.ui.layout.form">
+    <App id="_IDGenApp1">
+        <Page id="page">
+            <content>
+                <Table id="_IDGenTable1" items="{/EmployeeSet}" selectionChange="onSelect" mode="SingleSelectLeft" fixedLayout="false">
+                    <columns>
+                        <Column id="_IDGenColumn1">
+                            <Text id="_IDGenText1" text="{i18n>txtId}"/>
+                        </Column>
+                        <Column id="_IDGenColumn2">
+                            <Text id="_IDGenText2" text="{i18n>txtName}"/>
+                        </Column>
+                        <Column id="_IDGenColumn3">
+                            <Text id="_IDGenText3" text="{i18n>txtAdress}"/>
+                        </Column>
+                        <Column id="_IDGenColumn4">
+                            <Text id="_IDGenText4" text="{i18n>txtDisignation}"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="_IDGenColumnListItem1">
+                            <cells>
+                                <Text id="_IDGenText5" text="{Empid}"/>
+                            </cells>
+                            <cells>
+                                <Text id="_IDGenText6" text="{Empname}"/>
+                            </cells>
+                            <cells>
+                                <Text id="_IDGenText8" text="{Empadd}"/>
+                            </cells>
+                            <cells>
+                                <Text id="_IDGenText7" text="{Empdes}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+            <Title id="_IDGenTitle1" text="{i18n>txtEmployeeDetails}" class="myformTitle"></Title>
+            <myform:SimpleForm id="cMyform" editable="true">
+                <myform:content>
+                    <Label id="_IDGenLabel1" text="{i18n>txtId}"/>
+                    <Text id="_IDGenText9" text="{Empid}"/>
+                    <Label id="_IDGenLabel2" text="{i18n>txtName}"/>
+                    <Text id="_IDGenText10" text="{Empname}"/>
+                    <Label id="_IDGenLabel4" text="{i18n>txtAdress}"/>
+                    <Text id="_IDGenText12" text="{Empadd}"/>
+                    <Label id="_IDGenLabel5" text="{i18n>txtDisignation}"/>
+                    <Text id="_IDGenInput5" text="{Empdes}"/>
+                </myform:content>
+            </myform:SimpleForm>
+            <footer>
+                <Bar id="_IDGenBar1">
+                    <contentRight>
+                        <Button id="_IDGenButton1" text="{i18n>txtCreate}" press="oCreateEmpPopup" type="Emphasized"/>
+                        <Button id="_IDGenButton" text="{i18n>txtRead}" press="oSearchEmpPopup" type="Emphasized"/>
+                        <Button id="_IDGenButton2" text="{i18n>txtUpdate}" press="oUpdateEmpPopup" type="Emphasized"/>
+                        <Button id="_IDGenButton3" text="{i18n>txtDelete}" press="oDeleteEmp" type="Reject"/>
+                    </contentRight>
+                </Bar>
+            </footer>
+        </Page>
+    </App>
+</mvc:View>

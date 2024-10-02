@@ -1,0 +1,33 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:myform="sap.ui.layout.form">
+    <Dialog id="_IDGenDialog1" contentWidth="500px">
+        <content>
+            <myform:SimpleForm id="_IDGenSimpleForm1" editable="true">
+                <myform:content>
+                    <Label id="_IDGenLabel1" text="{i18n>txtId}"/>
+                    <Input id="_IDGenInput1" placeholder="{i18n>txtEnterEmployeeId}"/>
+                    <Label id="_IDGenLabel2" text="{i18n>txtName}"/>
+                    <Input id="_IDGenInput2" placeholder="{i18n>txtEnterYourName}"/>
+                    <Label id="_IDGenLabel3" text="{i18n>txtAdress}"/>
+                    <Input id="_IDGenInput3" placeholder="{i18n>txtEnterYourAddress}"/>
+                    <Label id="_IDGenLabel4" text="{i18n>txtDisignation}"/>
+                    <Input id="_IDGenInput4" placeholder="{i18n>txtEnterYourDesignation}"/>
+                </myform:content>
+            </myform:SimpleForm>
+        </content>
+        <customHeader>
+            <Bar id="_IDGenBar1">
+                <contentLeft>
+                    <Text id="_IDGenText1" text="Add Employee"/>
+                </contentLeft>
+                <contentRight>
+                    <Button id="_IDGenButton1" icon="sap-icon://decline" press="oCloseButton"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <buttons>
+            <Button id="_IDGenButton2" text="{i18n>txtAdd}" icon="sap-icon://add" press="oCreateEmp" type="Emphasized"/>
+        </buttons>
+    </Dialog>
+</c:FragmentDefinition>
